@@ -1,0 +1,20 @@
+{
+  "name": "ClickUp copy link",
+  "description": "Copy clickup card url as hyperlink with title as a text",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Press to copy card title with link"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.clickup.com/t/*"
+      ],
+      "js": [
+        "src/content.js"
+      ]
+    }
+  ]
+}
