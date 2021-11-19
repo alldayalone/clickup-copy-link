@@ -20,15 +20,13 @@ async function writeToClipboard(text, link) {
   ]);
 }
 
-chrome.runtime.onMessage.addListener(async (message) => {
-  if (message === 'copy') {
-    const title = getCardTitle();
-    const [cardId] = location.pathname.split('/').reverse();
-    const text = `[${cardId}] ${title}`;
-    const link = location.href;
+async function main() {
+  const title = getCardTitle();
+  const [cardId] = location.pathname.split('/').reverse();
+  const text = `[${cardId}] ${title}`;
+  const link = location.href;
 
-    window.addEventListener('focus', () => {
-      writeToClipboard(text, link)
-    }, { once: true });
-  }
-})
+  await writeToClipboard(text, link);
+}
+
+main();
