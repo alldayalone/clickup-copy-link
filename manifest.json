@@ -1,16 +1,16 @@
 {
   "name": "ClickUp copy link",
-  "description": "Copy clickup card url as hyperlink with title as a text",
-  "version": "1.0",
-  "manifest_version": 3,
-  "action": {
-    "default_title": "Press to copy card title with link"
-  },
+  "version": "0.0.1",
+  "description": "Copy ClickUp task(s) as hyperlink(s). It will use task id and title as a text",
   "icons": {
     "16": "assets/icon_16.png",
     "32": "assets/icon_32.png",
     "48": "assets/icon_48.png",
     "128": "assets/icon_128.png"
+  },
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Press to copy card title with link"
   },
   "background": {
     "service_worker": "src/background.js"
