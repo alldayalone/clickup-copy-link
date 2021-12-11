@@ -1,6 +1,6 @@
 {
   "name": "ClickUp copy link",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Copy ClickUp tasks as hyperlinks in a human readable format!",
   "icons": {
     "16": "assets/icon_16.png",
@@ -13,7 +13,7 @@
     "default_title": "Press to copy card title with link"
   },
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "scripts/background.js"
   },
   "permissions": [
     "scripting"
