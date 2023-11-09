@@ -8,8 +8,12 @@
     return `<a href="${taskDetail.link}"><span>${buildText(taskDetail)}</span></a>`;
   }
 
-  function buildText({ id, title }) {
-    return `[${id}] ${title}`;
+  function buildText(taskDetail) {
+    let text = storageValues.format;
+    for (const key in taskDetail) {
+      text = text.replace(new RegExp('{'+key+'}', "g"), taskDetail[key]);
+    }
+    return text;
   }
 
   async function writeToClipboard(taskDetails) {
@@ -67,7 +71,10 @@
     });
   }
 
+  let storageValues;
   try {
+    storageValues = await chrome.storage.sync.get({ format: '[{id}] {title}' });
+
     const taskDetails = await getTaskDetails()
 
     if (!taskDetails.length) {

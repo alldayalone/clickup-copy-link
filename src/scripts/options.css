@@ -1,0 +1,25 @@
+.options, .options input {
+    font-size: large;
+  }
+  
+  .options {
+    background: #fff;
+    color: #000;
+  }
+  
+  .options input[type=text] {
+    background: #ddd;
+    color: #000;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .options {
+      background: #222;
+      color: #fff;
+    }
+    .options input[type=text] {
+      background: #444;
+      color: #fff;
+    }
+  }
+  
