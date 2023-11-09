@@ -1,6 +1,6 @@
 {
   "name": "ClickUp copy link",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Copy ClickUp tasks as hyperlinks in a human readable format!",
   "icons": {
     "16": "assets/icon_16.png",

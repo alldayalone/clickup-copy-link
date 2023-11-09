@@ -33,7 +33,7 @@
   }
 
   function getSingleTaskDetails() {
-    const title = document.querySelector(".task-name__overlay").textContent;
+    const title = document.querySelector(".task-name__overlay, .cu-task-title__overlay").textContent;
     const [id] = location.pathname.split('/').reverse();
     const link = location.href;
 
